@@ -2,8 +2,8 @@
 HISTORY
 =======
 
-Unreleased
-----------
+1.1.0 (2025-09-16)
+------------------
 
 * Add support for feedback component.
 * Add support for segmented_control component.

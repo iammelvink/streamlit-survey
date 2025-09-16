@@ -18,7 +18,7 @@ import datetime
 import json
 import os
 from collections import defaultdict
-from typing import Any, Hashable, List, Optional, Union, TypeVar
+from typing import Any, Hashable, List, Optional, TypeVar, Union
 
 import streamlit as st
 
@@ -26,9 +26,12 @@ from streamlit_survey.pages import Pages
 from streamlit_survey.survey_component import (
     CheckBox,
     DateInput,
+    Feedback,
     MultiSelect,
     NumberInput,
+    Pills,
     Radio,
+    SegmentedControl,
     SelectBox,
     SelectSlider,
     Slider,
@@ -36,14 +39,12 @@ from streamlit_survey.survey_component import (
     TextArea,
     TextInput,
     TimeInput,
-    Pills,
-    Feedback,
-    SegmentedControl,
 )
 
 PathLike = Union[str, bytes, os.PathLike]
 
 V = TypeVar("V")
+
 
 class StreamlitSurvey:
     """

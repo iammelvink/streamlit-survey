@@ -18,8 +18,11 @@ from streamlit_survey.streamlit_survey import StreamlitSurvey
 from streamlit_survey.survey_component import (
     CheckBox,
     DateInput,
+    Feedback,
     MultiSelect,
+    Pills,
     Radio,
+    SegmentedControl,
     SelectBox,
     SelectSlider,
     Slider,
@@ -27,9 +30,6 @@ from streamlit_survey.survey_component import (
     TextArea,
     TextInput,
     TimeInput,
-    Pills,
-    Feedback,
-    SegmentedControl,
 )
 
 __all__ = [
