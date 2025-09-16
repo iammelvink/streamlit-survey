@@ -28,6 +28,8 @@ from streamlit_survey.survey_component import (
     TextInput,
     TimeInput,
     Pills,
+    Feedback,
+    SegmentedControl,
 )
 
 __all__ = [
@@ -38,13 +40,16 @@ __all__ = [
     "MultiSelect",
     "SelectBox",
     "Radio",
-    "SelectSlider" "Slider",
+    "SelectSlider",
+    "Slider",
     "CheckBox",
     "DateInput",
     "TimeInput",
     "Pills",
+    "Feedback",
+    "SegmentedControl",
 ]
 
 __author__ = """Olivier Binette"""
 __email__ = "olivier.binette@gmail.com"
-__version__ = "1.0.2"
+__version__ = "1.1.0"

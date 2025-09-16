@@ -85,6 +85,18 @@ with st.echo(code_location="below"):
     survey.slider("Slider:", min_value=0, max_value=100, value=50)
 
 """
+### Feedback
+"""
+with st.echo(code_location="below"):
+    survey.feedback("stars")
+
+"""
+### Segmented Control
+"""
+with st.echo(code_location="below"):
+    survey.segmented_control("Segmented control:", options=["Option 1", "Option 2", "Option 3", "etc"])
+
+"""
 ## Current Survey State:
 """
 st.json(survey.to_json(), expanded=False)

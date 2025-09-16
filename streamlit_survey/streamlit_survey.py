@@ -18,7 +18,7 @@ import datetime
 import json
 import os
 from collections import defaultdict
-from typing import Any, Hashable, List, Optional, Union
+from typing import Any, Hashable, List, Optional, Union, TypeVar
 
 import streamlit as st
 
@@ -37,10 +37,13 @@ from streamlit_survey.survey_component import (
     TextInput,
     TimeInput,
     Pills,
+    Feedback,
+    SegmentedControl,
 )
 
 PathLike = Union[str, bytes, os.PathLike]
 
+V = TypeVar("V")
 
 class StreamlitSurvey:
     """
@@ -487,7 +490,7 @@ class StreamlitSurvey:
         """
         return TimeInput(self, label, id, **kwargs).display()
 
-    def pills(self, label: str = "", id: str = None, **kwargs) -> List[Any]:
+    def pills(self, label: str = "", id: str = None, **kwargs) -> List[V] | V | None:
         """
         Create a pills widget
 
@@ -506,3 +509,41 @@ class StreamlitSurvey:
             List of selected options
         """
         return Pills(self, label, id, **kwargs).display()
+
+    def feedback(self, options: str, id: str = None, **kwargs) -> int | None:
+        """
+        Create a feedback widget
+
+        Parameters
+        ----------
+        options: str
+            "thumbs", "faces", or "stars".
+        **kwargs
+            Additional keyword arguments passed to `st.feedback`
+
+        Returns
+        -------
+        str
+            Value of the feedback
+        """
+        return Feedback(self, options, id, **kwargs).display()
+
+    def segmented_control(self, label: str = "", id: str = None, **kwargs) -> list[V] | V | None:
+        """
+        Create a segmented control widget
+
+        Parameters
+        ----------
+        label: str
+            Label of the widget
+        id: str
+            ID of the widget. If None, the ID will be automatically generated.
+        **kwargs
+            Additional keyword arguments passed to `st.segmented_control`
+
+        Returns
+        -------
+        str
+            Value of the segmented control
+        """
+        return SegmentedControl(self, label, id, **kwargs).display()

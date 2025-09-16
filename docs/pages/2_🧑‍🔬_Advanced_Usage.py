@@ -67,7 +67,7 @@ with st.expander("Code Example", expanded=True):
 
 In Streamlit, widgets are restored to their default values after they are no longer displayed (even if you specify a `key` to store their state in `st.session_state`). Instead, our survey components remember their state and are automatically restored to their previous value or default value when displayed.
 
-This way, you can associate questions to user inputs, using the `id` parameter to distinguish between answers corresponding to different inputs. For example, you may want to ask a user feedback on each prediction made by a ML model. You can let the user choose the prediction and give feedback. Using survey state restoration, users can easily go back to see and edit previous answers. 
+This way, you can associate questions to user inputs, using the `id` parameter to distinguish between answers corresponding to different inputs. For example, you may want to ask a user feedback on each prediction made by a ML model. You can let the user choose the prediction and give feedback. Using survey state restoration, users can easily go back to see and edit previous answers.
 
 Here's an example below. As long as you press "enter" to save your changes, you can go back and forth to edit your answers regarding different test case IDs.
 """

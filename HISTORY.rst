@@ -1,6 +1,13 @@
 =======
-History
+HISTORY
 =======
+
+Unreleased
+----------
+
+* Add support for feedback component.
+* Add support for segmented_control component.
+* Update Streamlit dependency to 1.40.0.
 
 1.0.0 (2024-08-08)
 ------------------

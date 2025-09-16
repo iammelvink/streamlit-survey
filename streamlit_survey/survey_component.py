@@ -126,7 +126,7 @@ class SurveyComponent(ABC):
                     # Note: Streamlit widget keys get automatically deleted from st.session_state. This restores widgets to their default value when they are no longer displayed. To get around this issue, we automatically restore widget values from the survey data when it is available.
                     st.session_state[self.key] = decoder(self.value)
 
-                value = Class(label=self.label, **self.kwargs)
+                value = Class(self.label, **self.kwargs)
                 self.value = encoder(value)
 
         return StreamlitInput
@@ -145,3 +145,5 @@ CheckBox = SurveyComponent.from_st_input(st.checkbox)
 DateInput = SurveyComponent.from_st_input(st.date_input, encoder=date_encoder, decoder=date_decoder)
 TimeInput = SurveyComponent.from_st_input(st.time_input, encoder=time_encoder, decoder=time_decoder)
 Pills = SurveyComponent.from_st_input(st.pills)
+Feedback = SurveyComponent.from_st_input(st.feedback)
+SegmentedControl = SurveyComponent.from_st_input(st.segmented_control)

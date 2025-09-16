@@ -1,4 +1,9 @@
+# Development environment for streamlit-survey
 name: streamlit-survey
+
+channels:
+  - conda-forge
+  - defaults
 
 dependencies:
   - python=3.10
@@ -7,4 +12,4 @@ dependencies:
     - streamlit
     - black
     - isort
-    - git+https://github.com/Valires/streamlit-survey.git
+    - -e .

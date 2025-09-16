@@ -6,7 +6,7 @@ with open("README.rst") as readme_file:
 with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
-requirements = ["streamlit>=1.18.0"]
+requirements = ["streamlit>=1.40.0"]
 
 setup(
     author="Olivier Binette",
@@ -18,9 +18,6 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
     ],
     description="Survey components for Streamlit apps",
     install_requires=requirements,
@@ -31,6 +28,6 @@ setup(
     name="streamlit_survey",
     packages=find_packages(include=["streamlit_survey", "streamlit_survey.*"]),
     url="https://github.com/OlivierBinette/streamlit_survey",
-    version="1.0.2",
+    version="1.1.0",
     zip_safe=False,
 )
